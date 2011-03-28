@@ -10,9 +10,7 @@ module Quotes
     
     def tweet
       quote = @database.next
-
-      puts quote
-      #Twitter.update(quote)
+      Twitter.update(quote)
     end
     
     private

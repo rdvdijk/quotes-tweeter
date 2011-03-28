@@ -1,0 +1,30 @@
+== Quotes Tweeter
+
+Quotes Tweeter does just that. It tweets quotes.
+
+== Configuration
+
+An example configuration YAML file:
+
+    general:
+      file: nietzsche.txt
+      suffix: Friedrich Nietzsche
+      random_seed: 1844
+    twitter:
+      consumer_key: [your_consumer_key]
+      consumer_secret: [your_consumer_secret]
+      oauth_token: [oauth_token]
+      oauth_token_secret: [oauth_token_secret]
+
+The general section of this configuration defines from which file to read
+the quotes, the suffix (author) of the quotes and optionally a random seed,
+which make the randomization of the tweeter predictable.
+
+The twitter section of the configuration file contains the twitter keys and
+secrets. You can obtain these at https://dev.twitter.com/apps.
+
+== Neil Young
+
+This small library was created by Roel van Dijk for @neilyounglyrics
+
+A file with example quotes has been included in the data folder.

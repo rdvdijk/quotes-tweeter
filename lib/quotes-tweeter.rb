@@ -11,7 +11,7 @@ require File.expand_path("quotes/tweeter", File.dirname(__FILE__))
 # Parse options.
 options = {}
 optparse = OptionParser.new do |opts|
-  opts.banner = "Usage: quotes_tweeter.rb [options]"
+  opts.banner = "Usage: quotes-tweeter.rb [options]"
   opts.on("-c", "--config FILE", "Config file.") do |config|
     options[:config] = config
   end

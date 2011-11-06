@@ -1,2 +1,3 @@
 .index_*
 data/*.yml
+cron.sh

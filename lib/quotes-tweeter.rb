@@ -2,8 +2,7 @@
 require "rubygems"
 require "bundler/setup"
 Bundler.setup
-require "twitter"
-require "yajl"
+Bundler.require
 
 require File.expand_path("quotes/database", File.dirname(__FILE__))
 require File.expand_path("quotes/tweeter", File.dirname(__FILE__))

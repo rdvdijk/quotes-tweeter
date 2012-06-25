@@ -1,21 +1,26 @@
 module Quotes
   class Tweeter
+
     def initialize(config_file = "config.yml")
-      pn = Pathname.new(config_file)
-      settings = YAML::load_file(pn.realpath)
-      settings["general"]["folder"] = "#{pn.dirname.realdirpath}"
+      pathname = Pathname.new(config_file)
+      settings = YAML::load_file(pathname.realpath)
+      settings["general"]["folder"] = "#{pathname.dirname.realdirpath}"
+
       @database = Quotes::Database.new(settings["general"])
+
       setup_twitter(settings["twitter"])
+      setup_facebook(settings["facebook"])
     end
-    
+
     def tweet
       quote = @database.next
       Twitter.update(quote)
+      @facebook.feed!(:message => quote)
     end
-    
+
     private
-    
-    # https://dev.twitter.com/apps
+
+    # see README
     def setup_twitter(settings)
       Twitter.configure do |config|
         config.consumer_key       = settings["consumer_key"]
@@ -24,5 +29,11 @@ module Quotes
         config.oauth_token_secret = settings["oauth_token_secret"]
       end
     end
+
+    # see README
+    def setup_facebook(settings)
+      @facebook = FbGraph::User.me(settings["access_token"])
+    end
+
   end
 end

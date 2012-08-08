@@ -69,7 +69,7 @@ These page tokens should not expire.. (?)
 Neil Young
 ==========
 
-This small library was created by Roel van Dijk for @neilyounglyrics
+This small library was created by Roel van Dijk for [@neilyounglyrics](http://twitter.com/neilyounglyrics).
 
 A file with example quotes has been included in the data folder.
 

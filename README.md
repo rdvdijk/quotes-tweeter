@@ -1,10 +1,12 @@
-== Quotes Tweeter
+Quotes Tweeter
+==============
 
 Quotes Tweeter does just that. It tweets quotes.
 
 Oh. And it also posts to a Facebook page.
 
-== Configuration
+Configuration
+=============
 
 An example configuration YAML file:
 
@@ -24,12 +26,14 @@ The general section of this configuration defines from which file to read
 the quotes, the suffix (author) of the quotes and optionally a random seed,
 which make the randomization of the tweeter predictable.
 
-=== Twitter
+Twitter
+-------
 
 The twitter section of the configuration file contains the twitter keys and
 secrets. You can obtain these at https://dev.twitter.com/apps.
 
-=== Facebook
+Facebook
+--------
 
 To post to Facebook, you need to get a long-lived access token to the page
 you want to post to.
@@ -62,7 +66,8 @@ These page tokens should not expire.. (?)
 
 (See: https://developers.facebook.com/roadmap/offline-access-removal/)
 
-== Neil Young
+Neil Young
+==========
 
 This small library was created by Roel van Dijk for @neilyounglyrics
 

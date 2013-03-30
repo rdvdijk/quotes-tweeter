@@ -3,6 +3,7 @@ require "rubygems"
 require "bundler/setup"
 Bundler.setup
 Bundler.require
+require 'optparse'
 
 require File.expand_path("quotes/database", File.dirname(__FILE__))
 require File.expand_path("quotes/tweeter", File.dirname(__FILE__))

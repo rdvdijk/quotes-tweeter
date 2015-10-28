@@ -60,9 +60,10 @@ To get an access token for your page:
 
 3) Use the new token to get the page's access token:
 
-    https://www.facebook.com/[USERID]/accounts?access_token=LONG_LIVED_ACCESS_TOKEN
+    https://www.facebook.com/me/accounts?access_token=LONG_LIVED_ACCESS_TOKEN
 
-These page tokens should not expire.. (?)
+This call will return JSON that contains page tokens for all pages that the
+user has access to. These page tokens should not expire.. (?)
 
 (See: https://developers.facebook.com/roadmap/offline-access-removal/)
 

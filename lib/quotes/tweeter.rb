@@ -32,7 +32,7 @@ module Quotes
 
     # see README
     def setup_facebook(settings)
-      @facebook = FbGraph::User.me(settings["access_token"])
+      @facebook = FbGraph2::User.me(settings["access_token"])
     end
 
   end

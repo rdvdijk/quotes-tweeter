@@ -1,3 +1,5 @@
+require 'yaml'
+
 module Quotes
   class Tweeter
 
@@ -14,7 +16,7 @@ module Quotes
 
     def tweet
       quote = @database.next
-      Twitter.update(quote)
+      @twitter.update(quote)
       @facebook.feed!(:message => quote)
     end
 
@@ -22,11 +24,11 @@ module Quotes
 
     # see README
     def setup_twitter(settings)
-      Twitter.configure do |config|
-        config.consumer_key       = settings["consumer_key"]
-        config.consumer_secret    = settings["consumer_secret"]
-        config.oauth_token        = settings["oauth_token"]
-        config.oauth_token_secret = settings["oauth_token_secret"]
+      @twitter = Twitter::REST::Client.new do |config|
+        config.consumer_key        = settings["consumer_key"]
+        config.consumer_secret     = settings["consumer_secret"]
+        config.access_token        = settings["oauth_token"]
+        config.access_token_secret = settings["oauth_token_secret"]
       end
     end
 

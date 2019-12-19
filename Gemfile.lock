@@ -40,7 +40,7 @@ GEM
     multipart-post (2.0.0)
     naught (1.1.0)
     public_suffix (2.0.5)
-    rack (2.0.1)
+    rack (2.0.8)
     rack-oauth2 (1.4.0)
       activesupport (>= 2.3)
       attr_required (>= 0.0.5)

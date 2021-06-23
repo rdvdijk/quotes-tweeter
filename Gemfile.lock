@@ -11,7 +11,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     aes_key_wrap (1.1.0)
     attr_required (1.0.1)
-    bindata (2.4.8)
+    bindata (2.4.10)
     buftok (0.2.0)
     concurrent-ruby (1.1.7)
     domain_name (0.5.20190701)

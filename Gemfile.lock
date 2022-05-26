@@ -79,7 +79,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.7)
     url_safe_base64 (0.2.2)
-    yajl-ruby (1.4.1)
+    yajl-ruby (1.4.3)
     zeitwerk (2.4.0)
 
 PLATFORMS
